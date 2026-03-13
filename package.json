@@ -4,11 +4,15 @@
   "description": "Model Context Protocol server for JobSpy",
   "main": "src/index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/borgius/jobspy-mcp-server.git"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "lint": "eslint --ext .js src/",
-    "lint:fix": "eslint --ext .js src/ --fix",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,14 +28,17 @@
     "@modelcontextprotocol/sdk": "^1.10.1",
     "change-case-object": "^2.0.0",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.22.1",
     "winston": "^3.10.0",
     "zod": "^3.24.3"
   },
+  "overrides": {
+    "qs": ">=6.15.0"
+  },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-import": "^2.31.0",
+    "globals": "^17.0.0",
     "nodemon": "^3.0.1"
   }
 }
