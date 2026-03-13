@@ -3,6 +3,9 @@ const importPlugin = require('eslint-plugin-import');
 
 module.exports = [
   {
+    ignores: ['node_modules/', 'dist/', 'coverage/', '**/*.min.js'],
+  },
+  {
     files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 'latest',
