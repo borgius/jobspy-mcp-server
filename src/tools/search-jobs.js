@@ -172,7 +172,7 @@ export function searchJobsHandler(params) {
     logger.info('Validated parameters', { validatedParams });
 
     const args = buildCommandArgs(validatedParams);
-    const cmd = `sudo docker run jobspy ${args.join(' ')}`;
+    const cmd = `docker run --rm jobspy ${args.join(' ')}`;
     logger.info(`Spawning process with args: ${cmd}`);
 
     const timeout = params.timeout || 60000; // Default timeout of 60 seconds
