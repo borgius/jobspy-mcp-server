@@ -30,6 +30,7 @@ const logger = winston.createLogger({
   defaultMeta: { service: 'jobspy-mcp-server' },
   transports: [
     new winston.transports.Console({
+      stderrLevels: ['error', 'warn', 'info', 'debug'],
       format: winston.format.combine(
         winston.format.colorize({ all: true }),
         winston.format.printf(
